@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pruebaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="areas">
+    <Key>
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_area" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreArea" Type="varchar" MaxLength="50" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="50" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="pruebaModelStoreContainer">
+    <EntitySet Name="areas" EntityType="Self.areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
